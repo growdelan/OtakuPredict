@@ -11,7 +11,7 @@ ma za zadanie przewidzieć, które z przekazanych nowych anime będą nam się p
 
 Skrypt dzięki wykorzystaniu few-shot learning analizuje przekazane przez nas przykłady anime i porównuje je z nowym tytułem i jego opisem. Jeśli uzna, że tytuł pasuje do naszych preferencji, dodaje go do pliku.
 
-Listę aniem które luibimy a które nie, mozemy przekazać do przykładów w prompt -> [tutaj](./llms/prompt.py)
+Listę anime, które lubimy, a które nie, możemy przekazać jako przykłady w prompt -> [tutaj](./llms/prompt.py)
 
 ## Uruchomienie
 
