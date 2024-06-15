@@ -10,7 +10,6 @@ from utils import utils
 def main(url: str, model: str):
     """Głowna funkcja do predykcji Anime"""
     load_dotenv()
-    system_prompt = utils.load_prompt("./system_prompt.txt")
     recommended_anime = []
     season_anime_data = utils.fetch_data(url)
 
@@ -18,19 +17,16 @@ def main(url: str, model: str):
         response = groq.run_groq_model(
             groq_api_key=os.getenv("GROQ_API_KEY"),
             model=model,
-            system_prompt=system_prompt,
             context=f"Title: {anime['title']}\nDescription: {anime['synopsis']}",
         )
 
         if response.lower() == "yes":
-            recommended_anime.append(
-                f"\nTitle: {anime['title']}\nDescription: {anime['synopsis']}\n\n"
-                + "#" * 30
+            selected_anime = (
+                f"\nTitle: {anime['title']}\nDescription: {anime['synopsis']}\n"
+                f"Link: {anime['url']}\n\n" + "#" * 30
             )
-            print(
-                f"\nTitle: {anime['title']}\nDescription: {anime['synopsis']}\n\n"
-                + "#" * 30
-            )
+            recommended_anime.append(selected_anime)
+            print(selected_anime)
 
     if recommended_anime:
         utils.save_to_file(recommended_anime, "./recommended_anime.txt")

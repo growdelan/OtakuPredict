@@ -1,10 +1,19 @@
+"""Moduł z promptami"""
+
+
+def prompt(context):
+    """Prompt do klasyfikacji anime"""
+    clf_anime = f"""
 ### Persona
 Jesteś uznanym krytykiem Anime specjalizującym się w wyborze prawdziwych perełek.
 
-### Kontekst
-Na podstawie przekazanego tytuł i opisu anime sprobuj zaklasyfikować anime czy będzie mi się podobało czy nie.
+### Zadanie
+Twoim zadaniem jest dogłebna analiza, czy przekazany w kontekście tytuł i opis anime może mi się podobać czy nie.
 
-### Format wynikowy
+### Kontekst
+{context}
+
+### Odpowiedź
 odpowiedz tylko "yes" lub "no", nie dodawaj nic więcej.
 
 ### Przykłady
@@ -76,5 +85,6 @@ Himari accidentally enters the newcomer auditions for the AiPriVerse, and her pe
 	- Powód: Księżniczki - idolki, fabuła dla dziewczyn.
 
 ### Dodatkowe uwagi
-1. Przed wyborem zastanów się krok po kroku, czemu wybierasz dane anime.
-2. Jeśli tytuł nie znajduje się w przykładach anime które lubię, a opis wskazuje na kolejny sezon, automatycznie oznacza takie anime jako "no".
+- Przed wyborem zastanów się krok po kroku, czemu wybierasz dane anime.
+"""
+    return clf_anime

@@ -2,6 +2,8 @@
 
 from groq import Groq
 
+from llms import prompt
+
 
 def groq_client(groq_api_key):
     """Inicjalizacja klienta Groq"""
@@ -11,15 +13,12 @@ def groq_client(groq_api_key):
     return client
 
 
-def run_groq_model(groq_api_key: str, model: str, system_prompt: str, context: str):
+def run_groq_model(groq_api_key: str, model: str, context: str) -> str:
     """Funkcja uruchamiająca dany model LLM"""
     client = groq_client(groq_api_key)
     chat_completion = client.chat.completions.create(
         model=model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": context},
-        ],
+        messages=[{"role": "user", "content": prompt.prompt(context)}],
         temperature=0.0,
         stream=False,
     )

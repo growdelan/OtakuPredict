@@ -3,13 +3,6 @@
 import requests  # type: ignore
 
 
-def load_prompt(filename):
-    """Funkcja do wczytywania promptu system_prompt.txt"""
-    with open(filename, "r", encoding="utf-8") as file:
-        prompt = file.read()
-    return prompt
-
-
 def save_to_file(data, file_name):
     """Funkcja do zapisywania rekomendowanych anime"""
     with open(file_name, "w", encoding="utf-8") as file:
