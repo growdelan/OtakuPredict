@@ -1,0 +1,6 @@
+.venv
+.env
+test.py
+__pycache__
+recommended_anime.txt
+.mypy_cache
