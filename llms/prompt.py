@@ -53,7 +53,7 @@ As the years pass, Frieren gradually realizes how her days in the hero's party t
 After witnessing a horrific personal loss at the hands of the invading creatures, Eren Yeager dedicates his life to their eradication by enlisting into the Survey Corps, an elite military unit that combats the merciless humanoids outside the protection of the walls. Eren, his adopted sister Mikasa Ackerman, and his childhood friend Armin Arlert join the brutal war against the Titans and race to discover a way of defeating them before the last walls are breached.
 	- Powód: Tytani, tajemnica, nieprzewidywalny scenariusz.
 
-#### Anime, które nie lubię
+#### Anime, których nie lubię
 1. **Gintama**
 	- Opis: After a one-year hiatus, Shinpachi Shimura returns to Edo, only to stumble upon a shocking surprise: Gintoki and Kagura, his fellow Yorozuya members, have become completely different characters! Fleeing from the Yorozuya headquarters in confusion, Shinpachi finds that all the denizens of Edo have undergone impossibly extreme changes, in both appearance and personality. Most unbelievably, his sister Otae has married the Shinsengumi chief and shameless stalker Isao Kondou and is pregnant with their first child.
 Bewildered, Shinpachi agrees to join the Shinsengumi at Otae and Kondou's request and finds even more startling transformations afoot both in and out of the ranks of the the organization. However, discovering that Vice Chief Toushirou Hijikata has remained unchanged, Shinpachi and his unlikely Shinsengumi ally set out to return the city of Edo to how they remember it.
@@ -86,5 +86,6 @@ Himari accidentally enters the newcomer auditions for the AiPriVerse, and her pe
 
 ### Dodatkowe uwagi
 - Przed wyborem zastanów się krok po kroku, czemu wybierasz dane anime.
+- Jeśli anime jest na liście które lubię, automatycznie je rekomenduj.
 """
     return clf_anime
